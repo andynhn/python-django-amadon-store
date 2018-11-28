@@ -1,0 +1,19 @@
+<!-- By Andy Nguyen -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Amadon App - Checkout Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank you for your business!</h1>
+        <p>We charged your credit card for <span>${{request.session.sum_order}}</span></p>
+        <p>You have ordered {{request.session.count}} {% if request.session.count == 1 %} item {% endif %} {% if request.session.count > 1 %} items {% endif %} so far and spent ${{request.session.total_spent}} with Amadon.com!</p>
+        <a href="/amadon" class="btn btn-warning">Go back</a>
+    </div>
+</body>
+</html>
